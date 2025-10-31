@@ -1,9 +1,9 @@
 import java.lang.Exception;
 
 public class InvalidRadiusException extends Exception {
-    private double r;
+    private String r;
 
-    public InvalidRadiusException(double radius) {
+    public InvalidRadiusException(String radius) {
         r = radius;
     }
 

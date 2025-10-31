@@ -1,15 +1,18 @@
 public class TestCircle {
     public static void main(String[] args) {
         try {
-
-            Circle c1 = new Circle(5, 5, 10);
+            Circle c1 = new Circle(5, 5, "10");
             c1.display();
 
-
-            Circle c2 = new Circle(0, 0, -3);
+            Circle c2 = new Circle(0, 0, "-3");
             c2.display();
+        } catch (InvalidRadiusException e) {
+            e.printError();
         }
-        catch (InvalidRadiusException e) {
+
+        try {
+            Circle c3 = new Circle(2, 2, "abc");
+        } catch (InvalidRadiusException e) {
             e.printError();
         }
     }
